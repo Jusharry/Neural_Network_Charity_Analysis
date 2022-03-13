@@ -24,29 +24,29 @@ The objective of this analysis was to use deep learning methodology to train a N
 > NAME
 
 * Compiling , Training and Evaluating the Model
-- Based on the fact that the number of input features was large (43), I decidec to start with a conservative number(1)     of neurons to evaluate the initial performance and used the "Relu" activation function due to its simplifying output when used in neural network models
-![screenshot]()
-![screenshot]()
+- Based on the fact that the number of input features was large (43), I decided to start with a conservative number(1)     of neurons to evaluate the initial performance and used the "Relu" activation function due to its simplifying output when used in neural network models
+![screenshot](Resources/init_shape.png)
+![screenshot](Resources/print_features.png)
 
 - After multiple attempts and changes to the feature set the target performance was not achieved. 
-![screenshot]()
+![screenshot](Resources/init_result.png)
 
 - Stepts taken in attempt to increase accuracy were as follows:
 * Removed binned columns 
-![screenshot]()
+![screenshot](Resources/dropped_vars.png)
 
 * Increased the number of hidden layers and neurons
-![screenshot]()
+![screenshot](Resources/opti_1.png)
 
 * Changed the activation parameters while increasing hidden features
-![screenshot]()
-![screenshot]()
+![screenshot](Resources/opt_2.png)
+![screenshot](Resources/opti_3.png)
 
 
 ## Summary
 Overall the neural network was only able to achieve a maximum accuracy of ~ 72% . Other attempts that were made to increase accuracy included using supervised learning models to apply a more linear approach seeing that the expected outcome is a classification based problem with a clearly deifined target i.e Was the money used effectively. 
 These methods when applied to the preprocessed data using the same metrics did not increase the accuracy and in some cases performed noticeable worse. 
-![screenshot]()
+![screenshot](Resources/summary.png)
 A third linear model test took an exceedingly long time to produce results and therefore cannot be reliably recommended. 
-![screenshot]()
+![screenshot](Resources/summary_1.png)
 Bearing in mind the computing power required to execute a neural network and based on the results observed, I would position using the RandomForestClssifier on a dataset seuch as this.
